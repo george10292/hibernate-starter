@@ -42,10 +42,10 @@ public class HibernateRunner {
            session.beginTransaction();
             session1.beginTransaction();
 
-           var payment = session.find(Payment.class, 1L, LockModeType.OPTIMISTIC);
+           var payment = session.find(Payment.class, 1L);
           payment.setAmount(payment.getAmount() + 10);
 
-            var payment1 = session1.find(Payment.class, 1L, LockModeType.OPTIMISTIC);
+            var payment1 = session1.find(Payment.class, 1L);
             payment1.setAmount(payment1.getAmount() + 20);
            session.getTransaction().commit();
             session1.getTransaction().commit();

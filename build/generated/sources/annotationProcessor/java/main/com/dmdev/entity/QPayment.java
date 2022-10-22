@@ -28,8 +28,6 @@ public class QPayment extends EntityPathBase<Payment> {
 
     public final QUser receiver;
 
-    public final NumberPath<Long> version = createNumber("version", Long.class);
-
     public QPayment(String variable) {
         this(Payment.class, forVariable(variable), INITS);
     }

@@ -11,12 +11,10 @@ public abstract class Payment_ {
 	public static volatile SingularAttribute<Payment, Integer> amount;
 	public static volatile SingularAttribute<Payment, User> receiver;
 	public static volatile SingularAttribute<Payment, Long> id;
-	public static volatile SingularAttribute<Payment, Long> version;
 
 	public static final String AMOUNT = "amount";
 	public static final String RECEIVER = "receiver";
 	public static final String ID = "id";
-	public static final String VERSION = "version";
 
 }
 
